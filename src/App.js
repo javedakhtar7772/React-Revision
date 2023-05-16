@@ -22,7 +22,7 @@ function App() {
           <Route path='login'element={<Login />} />
           <Route path='event'element={<EventHandling />} />
           <Route path='navbar'element={<Navbar />} />
-          <Route path='statemanagement'element={<StateManagemet />} />
+          <Route path='state'element={<StateManagemet />} />
 
 
           <Route path='/*'element={<NotFound />} />
