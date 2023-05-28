@@ -5,7 +5,6 @@ const StateManagemet = () => {
     const [mynum, setMynum] = useState(5)
     const[size, setSize ]=useState(200);
     const [imgPath , setImgPath]=useState('https://imgnew.outlookindia.com/uploadimage/library/16_9/16_9_5/Groot_1660247943.webp')
-    
     return (
     <div className='container py-5' >
         <h1>StateManagement</h1>
@@ -20,8 +19,8 @@ const StateManagemet = () => {
           {imgPath}
 
           <img src= {imgPath}alt=' ' width={size}/>
-          <button className='btn btn-primary' onClick={()=>{setSize +50}}>+</button>
-          <button className='btn btn-primary' onClick={()=>{setSize -50}}>-</button>
+          <button className='btn btn-primary' onClick={()=>{setSize(size +50)}}>+</button>
+          <button className='btn btn-primary' onClick={()=>{setSize (size -50)}}>-</button>
           <input className='from-control'onChange ={e=>setImgPath(e.target.value)}  />
     </div>
   )
