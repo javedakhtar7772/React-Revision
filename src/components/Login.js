@@ -7,7 +7,11 @@ const Login = () => {
 
   const loginValidation = Yup.object().shape({
     email: Yup.string().required('please Provide email').email("Invalid Email"),
-    password: Yup.string().required('please Provide Password'),
+    password: Yup.string().required('please Provide Password')
+    .matches(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+      "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
+    ),
   });
 
   const loginForm = useFormik({

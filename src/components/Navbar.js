@@ -5,7 +5,7 @@ const Navbar = () => {
   const[loggedIn, setLoggedIn]= useState(false)  
   const showLoggedOption = () => {
     if(loggedIn)
-      return<button className='btn btn-primary' >Logout</button>
+      return<button className='btn btn-primary' onClick={()=>{setLoggedIn(false)}}>Logout</button>
     else
       return<button className='btn btn-danger'onClick={()=>{setLoggedIn(true)}} >Login</button>
   }
@@ -18,6 +18,8 @@ const Navbar = () => {
             <NavLink className='nav-link mx-3' to='/login'>Login</NavLink>
             <NavLink className='nav-link mx-3' to='/event'>Event</NavLink>
             <NavLink className='nav-link mx-3' to='/state'>State</NavLink>
+            <NavLink className='nav-link mx-3' to='listingpage'>ListingPage</NavLink>
+            <NavLink className='nav-link mx-3' to='todo'>Todo App</NavLink>
         </div>
         <div>
           {

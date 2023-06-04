@@ -8,6 +8,8 @@ import NotFound from './components/NotFound';
 import EventHandling from './components/EventHandling';
 import Navbar from './components/Navbar';
 import StateManagemet from './components/StateManagemet';
+import ListingPage from './components/ListingPage';
+import Todo from './components/Todo';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route path='event'element={<EventHandling />} />
           <Route path='navbar'element={<Navbar />} />
           <Route path='state'element={<StateManagemet />} />
+          <Route path='listingpage'element={<ListingPage />} />
+          <Route path='todo'element={<Todo />} />
 
 
           <Route path='/*'element={<NotFound />} />
